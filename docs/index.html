@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#103d47">
+  <meta name="description" content="OpenPatient World：探索从基因、细胞到记忆、人格与关系的患者世界模型。创建你的概念数字分身，体验可追溯的状态变化。">
+  <title>OpenPatient World — 从一个人，到一个世界</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23103d47'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%239fe0d0' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%239fe0d0'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="header wrap">
+    <a class="brand" href="#" aria-label="OpenPatient World 首页"><span class="brand-mark">◎</span><span>OpenPatient<span class="brand-sub">WORLD</span></span></a>
+    <nav aria-label="主导航"><a href="#atlas">世界模型</a><a href="#twin">我的分身</a><a href="#open">一起构建</a></nav>
+    <a class="repo-link" href="https://github.com/InterLeukin2/openpatient-world" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero wrap" id="atlas" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">AN OPEN EXPLORATION OF THE HUMAN SYSTEM</p>
+        <h1 id="hero-title">从一个人，<br>到一个<span class="accent">世界。</span></h1>
+        <p class="hero-text">身体有自己的运行方式。<br>我们也有记忆、信念，和说不出口的担心。</p>
+        <p class="hero-sub">探索一个会变化的数字患者：连接生物状态与人的体验，让每一次问诊都有来处，也有后续。</p>
+        <div class="hero-actions"><a class="button primary" href="#twin">创建我的概念分身 <span aria-hidden="true">↗</span></a><a class="text-link" href="#blueprint">了解研究构想 ↓</a></div>
+        <p class="concept-note"><span class="outline-badge">概念原型 · v0.1</span> 当前仅演示行为状态，未接入生物模型。</p>
+      </div>
+      <div class="atlas">
+        <div class="atlas-top"><span>THE PATIENT AT MULTIPLE SCALES</span><span>可点击探索</span></div>
+        <div class="orbit" aria-label="患者模型层级，点击按钮查看说明">
+          <svg class="orbit-diagram" viewBox="0 0 600 510" aria-hidden="true">
+            <defs><pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.8" fill="#c6d4d7"/></pattern></defs>
+            <rect width="600" height="510" fill="url(#grid)"/>
+            <g fill="none" stroke="#cadbdc"><ellipse cx="300" cy="255" rx="225" ry="195"/><ellipse cx="300" cy="255" rx="174" ry="152"/><ellipse cx="300" cy="255" rx="121" ry="107"/><ellipse cx="300" cy="255" rx="68" ry="62"/><path stroke-dasharray="3 7" d="M300 40V465M50 255H550"/></g>
+            <g fill="none" stroke-linecap="round" stroke-width="3"><path stroke="#299d93" d="M300 60A225 195 0 0 1 525 255"/><path stroke="#7194bd" d="M126 255A174 152 0 0 1 300 103"/><path stroke="#e2a55c" d="M300 362A121 107 0 0 0 421 255"/></g>
+            <circle cx="300" cy="255" r="33" fill="#103d47"/><circle cx="300" cy="255" r="13" fill="none" stroke="#b3e8d7" stroke-width="2"/>
+            <g font-family="monospace" font-size="11" fill="#59747b"><text x="305" y="45">ENVIRONMENT ↔ INDIVIDUAL</text><text x="380" y="488">SCALE ≠ CERTAINTY</text></g>
+          </svg>
+          <button class="layer-node genome" data-layer="genome" aria-pressed="false"><span class="node-dot blue"></span>基因组<small>GENOME</small></button>
+          <button class="layer-node cell" data-layer="cell" aria-pressed="false"><span class="node-dot blue"></span>细胞与组织<small>CELL & TISSUE</small></button>
+          <button class="layer-node body" data-layer="body" aria-pressed="false"><span class="node-dot gold"></span>身体状态<small>PHYSIOLOGY</small></button>
+          <button class="layer-node mind active" data-layer="mind" aria-pressed="true"><span class="node-dot"></span>记忆与人格<small>MEMORY & SELF</small></button>
+          <button class="layer-node relation" data-layer="relation" aria-pressed="false"><span class="node-dot"></span>关系与环境<small>RELATIONSHIPS</small></button>
+          <span class="orbit-core">同一个人</span>
+        </div>
+        <div class="layer-description" aria-live="polite"><span class="layer-number" id="layer-number">04 / 05</span><div><h2 id="layer-title">记忆与人格</h2><p id="layer-description">相对稳定的个性，与不断变化的信任和情绪共同影响：我们注意到什么，又愿意说出什么。</p></div><span class="small-tag" id="layer-status">本页示意</span></div>
+      </div>
+    </section>
+    <div class="principle-strip"><div class="wrap"><span>一个分身，多个尺度</span><p>生物过程产生状态 <span>→</span> 人感知并表达 <span>→</span> 对话影响行为 <span>→</span> 行为反馈到身体</p></div></div>
+
+    <section class="section wrap" id="twin" aria-labelledby="twin-title">
+      <div class="section-heading"><div><p class="eyebrow">YOUR DIGITAL COUNTERPART</p><h2 id="twin-title">如果这个患者，是你呢？</h2></div><p>从你愿意描述的一小部分自己开始。<br>不需要病历，也不需要基因数据。</p></div>
+      <div class="lab">
+        <form class="profile-panel" id="profile-form">
+          <div class="panel-heading"><span class="panel-index">01</span><h3>定义起点</h3><span class="small-tag">仅当前页面</span></div>
+          <label for="nickname">分身称呼</label><input id="nickname" name="nickname" maxlength="24" value="小林" autocomplete="off" placeholder="用一个昵称就好">
+          <div class="form-pair"><div><label for="mbti">MBTI <span class="muted">可选标签</span></label><select id="mbti" name="mbti"><option value="unset">不设定</option><option>INTJ</option><option>INTP</option><option>ENTJ</option><option>ENTP</option><option>INFJ</option><option>INFP</option><option>ENFJ</option><option>ENFP</option><option>ISTJ</option><option>ISFJ</option><option>ESTJ</option><option>ESFJ</option><option>ISTP</option><option>ISFP</option><option>ESTP</option><option>ESFP</option></select></div><div><label for="style">表达习惯</label><select id="style" name="style"><option value="reserved">慢热，问到才说</option><option value="direct">直接，主动表达</option><option value="detailed">详细，喜欢解释</option></select></div></div>
+          <p class="field-note">MBTI 只作为自我描述，不自动推断健康状况或行为参数。</p>
+          <div class="slider-field"><label for="trust">初始信任 <output id="trust-value" for="trust">40</output></label><input id="trust" type="range" min="0" max="100" value="40"><div class="range-ends"><span>先观察</span><span>愿意相信</span></div></div>
+          <div class="slider-field"><label for="literacy">健康信息理解 <output id="literacy-value" for="literacy">55</output></label><input id="literacy" type="range" min="0" max="100" value="55"><div class="range-ends"><span>需要通俗解释</span><span>熟悉医学信息</span></div></div>
+          <div class="slider-field"><label for="access">执行方案的现实条件 <output id="access-value" for="access">65</output></label><input id="access" type="range" min="0" max="100" value="65"><div class="range-ends"><span>时间、费用受限</span><span>条件充足</span></div></div>
+          <button class="button primary full" type="submit">用这些设定开始体验 <span aria-hidden="true">→</span></button>
+          <p class="field-note" id="profile-notice" role="status">设定不是心理测评结果，刷新页面后不会保留。</p>
+        </form>
+        <div class="simulation-panel">
+          <div class="panel-heading"><span class="panel-index">02</span><h3>让一次对话留下痕迹</h3><span class="session-count" id="session-count">互动 0 / 6</span></div>
+          <div class="patient-intro"><div class="avatar" aria-hidden="true">林</div><div><h4 id="patient-name">小林的概念分身</h4><p id="patient-meta">慢热，问到才说 · 合成情境</p></div><span class="small-tag">行为演示</span></div>
+          <p class="scenario">情境：复诊时，你担心自己的顾虑没被听见，也不确定能否执行后续方案。选择一种沟通方式，观察分身的反应。</p>
+          <div class="chat-log" id="chat-log" role="log" aria-label="模拟对话记录" aria-live="polite"></div>
+          <div class="action-options"><button id="empathetic" type="button"><span>解释并邀请表达</span><small>“你最担心什么？我们一起找能做到的办法。”</small></button><button id="rushed" type="button"><span>催促并直接下结论</span><small>“不用想这么多，照着方案做就行。”</small></button></div>
+          <div class="metrics" aria-live="polite"><div><span>信任</span><strong id="metric-trust">40<span>/100</span></strong><div class="meter"><i id="bar-trust"></i></div></div><div><span>表达意愿</span><strong id="metric-disclosure">35<span>/100</span></strong><div class="meter"><i id="bar-disclosure"></i></div></div><div><span>方案接受意愿</span><strong id="metric-readiness">50<span>/100</span></strong><div class="meter"><i id="bar-readiness"></i></div></div></div>
+          <div class="trace"><span>变化依据</span><p id="trace-text">请选择沟通方式。每次互动会保留上一轮状态。</p></div>
+          <div class="session-footer"><span>启发式规则演示 · 无模型 API · 无临床预测</span><button type="button" id="reset" class="text-button">重置体验 ↺</button></div>
+        </div>
+      </div>
+      <div class="ownership"><div><h3>你的分身，由你决定带走哪一部分。</h3><p>当前设定和对话仅在页面内存中处理。导出不会上传，也不会自动成为公开样本。</p></div><button type="button" class="button secondary" id="export">导出分身 JSON <span aria-hidden="true">↓</span></button></div>
+    </section>
+
+    <section class="blueprint-section" id="blueprint"><div class="wrap section">
+      <div class="section-heading"><div><p class="eyebrow">THE RESEARCH BLUEPRINT</p><h2>身体的变化，<br>与一个人的经历相遇。</h2></div><p>我们想连接的是一个可检验的反馈过程。<br>每条连接都需要自己的证据。</p></div>
+      <div class="blueprint-grid"><article><span class="model-label">BIOLOGICAL WORLD</span><h3>身体如何变化</h3><p>基因变异、细胞状态、器官功能和实际治疗暴露，共同构成生物过程的输入。专门的模型负责预测，检查数据用于校准。</p><div class="model-tokens"><span>基因调控</span><span>细胞扰动</span><span>生理与药代</span></div><p class="status-line">拟集成 · 当前无生物模拟</p></article><div class="bridge"><span>症状与检查</span><span class="bridge-arrow" aria-hidden="true">⇄</span><span>行为与暴露</span></div><article><span class="model-label">LIVED EXPERIENCE</span><h3>人如何感知与行动</h3><p>同一份身体数据，可能对应不同的感受、理解与表达。信任、记忆、现实条件会影响披露和行动，也可能在后续就诊中延续。</p><div class="model-tokens"><span>人格与记忆</span><span>关系与信任</span><span>社会环境</span></div><p class="status-line">部分示意 · 长期记忆尚待实现</p></article></div>
+      <div class="boundary"><h3>把未知也留在模型里。</h3><p>这里的分身是自述驱动的概念角色，还不是经真实个体数据校准的数字孪生。基因预测不能直接推出完整病程；国家、族群和 MBTI 也不决定一个人的生物状态。原型中的分数与变化规则是设计示意，不是测量结果。</p></div>
+    </div></section>
+
+    <section class="section wrap" id="open">
+      <div class="section-heading"><div><p class="eyebrow">BUILD IN THE OPEN</p><h2>一个人无法写完所有的人。</h2></div><p>把你熟悉的表达、疑虑和沟通情境带进来。<br>让贡献可讨论，让每次更新有记录。</p></div>
+      <div class="contribution-grid"><article><span class="contribution-label">FOR EVERYONE</span><h3>贡献一种表达</h3><p>一个合成角色、一段对话、一次信任改变的原因。无需公开自己的健康信息。</p><a href="https://github.com/InterLeukin2/openpatient-world/issues/new?template=persona.yml">提交角色构想 ↗</a></article><article><span class="contribution-label">FOR RESEARCHERS</span><h3>连接一个模型</h3><p>提出一个生理、细胞或行为模块，说明输入输出、适用范围、证据与验证方式。</p><a href="https://github.com/InterLeukin2/openpatient-world/issues/new?template=model.yml">讨论模型接入 ↗</a></article><article><span class="contribution-label">FOR CLINICIANS</span><h3>审阅一段因果</h3><p>指出哪些问诊行为值得测试，哪些临床推断没有依据，帮助构建可评估的情境。</p><a href="https://github.com/InterLeukin2/openpatient-world/blob/main/CONTRIBUTING.md">阅读贡献指南 ↗</a></article></div>
+      <div class="roadmap"><h3>从现在开始，一层一层建立。</h3><div><span class="phase current">现在</span><p>概念网站<br><small>角色设定与状态演示</small></p></div><div><span class="phase">下一步</span><p>可复现患者情境<br><small>真实行为验证与版本化评测</small></p></div><div><span class="phase">研究方向</span><p>多尺度连接<br><small>纵向记忆与专病生物模型</small></p></div></div>
+    </section>
+    <section class="references wrap" aria-labelledby="refs-title"><div><p class="eyebrow">RESEARCH ROOTS</p><h2 id="refs-title">这项构想站在哪些工作上</h2><p>参考研究与工具，尚未集成；不代表合作或背书。</p></div><ul><li><a href="https://github.com/dek924/PatientSim">PatientSim <span>多维患者角色 ↗</span></a></li><li><a href="https://ipip.ori.org/">IPIP <span>公共领域人格题库 ↗</span></a></li><li><a href="https://doi.org/10.5334/pme.2379">PerTRAIN <span>动态人际行为 ↗</span></a></li><li><a href="https://www.nature.com/articles/s41586-025-10014-0">AlphaGenome <span>调控变异效应预测 ↗</span></a></li><li><a href="https://github.com/MathCancer/PhysiCell">PhysiCell <span>多细胞机制模拟 ↗</span></a></li><li><a href="https://github.com/vivarium-collective/vivarium-core">Vivarium <span>多尺度模型组合 ↗</span></a></li></ul></section>
+  </main>
+  <footer class="footer wrap"><a class="brand" href="#"><span class="brand-mark">◎</span><span>OpenPatient<span class="brand-sub">WORLD</span></span></a><p>一个关于人如何被理解的开放研究构想。<br><span>概念演示，不提供诊断或治疗建议。</span></p><a href="https://github.com/InterLeukin2/openpatient-world">查看源码 ↗</a></footer>
+</body>
+</html>

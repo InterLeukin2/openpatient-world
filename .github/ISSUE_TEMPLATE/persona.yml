@@ -1,0 +1,33 @@
+name: 角色构想 / Persona proposal
+description: 贡献一个合成角色或沟通情境
+title: "[Persona] "
+body:
+  - type: markdown
+    attributes:
+      value: 请仅提交合成角色；不要上传真实病历、基因数据或可识别个人的信息。
+  - type: textarea
+    id: persona
+    attributes:
+      label: 角色与背景
+      description: 表达习惯、顾虑、健康素养和现实条件；MBTI 可选。
+    validations:
+      required: true
+  - type: textarea
+    id: interaction
+    attributes:
+      label: 示例互动与状态变化
+      description: 医生说了什么、患者如何回应、信任或披露如何变化？
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 假设与验证思路
+      description: 哪些是创作、哪些有依据？如何与只改变一个变量的角色比较？
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 公开贡献确认
+      options:
+        - label: 内容为合成情境，不包含可识别真实个人的健康信息；我同意在公开 Issue 中展示。
+          required: true

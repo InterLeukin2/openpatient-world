@@ -1,0 +1,25 @@
+name: 模型接入 / Model proposal
+description: 提议一个生物、临床或行为模块
+title: "[Model] "
+body:
+  - type: textarea
+    id: scope
+    attributes:
+      label: 模型与适用范围
+      description: 论文或代码链接、许可、已验证的任务及局限。
+    validations:
+      required: true
+  - type: textarea
+    id: interface
+    attributes:
+      label: 输入输出与时间尺度
+      description: 状态变量、单位、更新周期、前置依赖和不确定性。
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: 验证方式
+      description: 可用数据、对照基线、指标及跨尺度连接的依据。
+    validations:
+      required: true
